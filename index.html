@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <!-- Bootstrap CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <title>Hello, world!</title>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand">
+      <h1><i class="fa fa-coffee" aria-hidden="true"> </i> Todo-List</h1>
+    </a>
+    <div class="srch">
+      <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="sb" onkeyup="myFunction()" > -->
+
+      <!-- <button class="btn btn-outline-success my-2 my-sm-0 " id="srh" type="submit" onclick="sortTable()">Sort</button> -->
+
+      <div class="input-group md-form form-sm form-1 pl-0">
+        <div class="input-group-prepend">
+          <form class="form-inline ">
+            <span class="input-group-text cyan lighten-2 " id="basic-text1"><i class="fas fa-search text-dark fa-1x"
+                aria-hidden="true" id="b"></i></span>
+        </div>
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="sb"
+          onkeyup="myFunction()">
+        </form>
+      </div>
+    </div>
+
+
+
+
+  </nav>
+
+  <div class="container my-4 p-8">
+  
+    <!-- <div class="he "><h1><b>Todo-List</b> </h1></div> -->
+    <div class="form-group">
+      <label for="title">
+        <h2 id="t">Title</h2>
+      </label>
+      <input type="text" class="form-control" id="title" placeholder="title">
+    </div>
+
+    <div class="form-group">
+      <label for="desc">
+        <h2 id="d">Description</h2>
+      </label>
+      <textarea class="form-control" id="desc" rows="3" placeholder="description"></textarea>
+    </div>
+    <button type="submit" id=add class="btn  btn-primary" role="group" onclick="add">Add to List</button>
+    <button type="submit" id=clear class="btn  btn-primary" role="group" onclick="clearstr()">Clear</button>
+
+    <div class="actualList my-4">
+      <h3 id="y">Your List</h3>
+      <table class="table table-dark " id="myTable">
+        <thead>
+          <tr>
+            <th scope="col" id="identity" data-column="id" data-order="desc">id</th>
+            <th scope="col" onclick="sortTable(0)">Title</th>
+            <th scope="col" onclick="sortTable(1)">Desription</th>
+            <th scope="col">Delete</th>
+          </tr>
+        </thead>
+        <tbody id="tlbody">
+          <tr>
+            <th scope="row"  class="item">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td><button class="btn btn-sm btn-primary">Delete</button></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="main.js"></script>
+ 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script> 
+  <!-- <script src="https://getbootstrap.com/dist/js/bootstrap.min.js"></script> -->
+
+
+  <script type="text/javascript">
+    $('tbody').sortable();
+  </script>
+</body>
+
+</html>
